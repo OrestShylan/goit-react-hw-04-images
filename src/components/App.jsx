@@ -54,7 +54,7 @@ export const App = () => {
 
   const toggleModal = images => {
     setShowModal(prev => !prev);
-    setLargeImageURL(largeImageURL);
+    setLargeImageURL(images);
   };
 
   return (

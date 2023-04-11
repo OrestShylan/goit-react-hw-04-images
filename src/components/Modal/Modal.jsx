@@ -4,7 +4,7 @@ import { Overlay, ModalWindow } from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ onClose, imgLarg }) => {
+export const Modal = ({ onClose, imgLarge }) => {
   useEffect(() => {
     const handleCloseOnEscape = event => {
       if (event.code === 'Escape') {
@@ -28,7 +28,7 @@ export const Modal = ({ onClose, imgLarg }) => {
   return createPortal(
     <Overlay onClick={hendleCloseOnOverlay}>
       <ModalWindow>
-        <img src={imgLarg} alt="" />
+        <img src={imgLarge} alt="" />
       </ModalWindow>
     </Overlay>,
     modalRoot
