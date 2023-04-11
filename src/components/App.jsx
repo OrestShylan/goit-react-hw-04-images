@@ -21,17 +21,6 @@ export const App = () => {
   const [isLoader, setIsLoader] = useState(false);
   const [isLoadMore, setIsLoadMore] = useState(false);
 
-  // state = {
-  //   searchValue: '',
-  //   page: 1,
-  //   per_page: 12,
-  //   images: [],
-  //   showModal: false,
-  //   largeImageURL: '',
-  //   isLoader: false,
-  //   isLoadMore: false,
-  // };
-
   useEffect(() => {
     if (searchValue === '') {
       return;
@@ -55,25 +44,16 @@ export const App = () => {
   }, [page, per_page, searchValue]);
 
   const hendleSubmitForm = searchValue => {
-    // this.setState({ searchValue, page: 1, images: [] });
     setSearchValue(searchValue);
     setPage(1);
     setImages([]);
   };
   const loadMore = () => {
-    // this.setState(prevState => ({
-    //   page: prevState.page + 1,
-    // }));
     setPage(prevState => prevState + 1);
   };
 
   const toggleModal = images => {
-    // this.setState(prevState => ({
-    //   showModal: !prevState.showModal,
-    //   largeImageURL: images,
-    // }));
-
-    setShowModal(!showModal);
+    setShowModal(prev => !prev);
     setLargeImageURL(largeImageURL);
   };
 
